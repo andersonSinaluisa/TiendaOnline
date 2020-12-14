@@ -14,4 +14,4 @@
   - instalar requermientos
     >npm install
   - run
-    >npm start
+    >npm run web
