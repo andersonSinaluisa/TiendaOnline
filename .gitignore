@@ -1,0 +1,18 @@
+*.pyc
+shop/node_modules/**/*
+shop/.expo/**/*
+Backend/apps/main/migrations/**
+Backend/apps/mant/migrations/**
+Backend/apps/mov/migrations/**
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store

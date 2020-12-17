@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
+import { Grid, TextField, Button } from '@material-ui/core';
+import { GoogleSignin, GoogleSigninButton } from '@react-native-community/google-signin';
 
-
+import { app } from '../config/index'
 export const Login = () => {
-    const [usuario, onChangeUser] = useState('');
-    const [pass, onChangePass] = useState('');
-    const label_user = 'Usuario';
-    const label_pass = 'Contraseña';
+
+
 
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>{label_user}</Text>
-            <TextInput style={{ height: 40, borderRadius: 20, borderWidth: 1, padding: 5 }}
-                value={usuario} onChangeText={usuario => onChangeUser(usuario)}
-            ></TextInput>
-                <Text>{label_pass}</Text>
-                <TextInput style={{ height: 40, borderRadius: 20, borderWidth: 1, padding: 5 }}
-                    value={pass} onChangeText={pass => onChangePass(pass)}></TextInput>
-            
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <GoogleSigninButton
+                style={{ width: 192, height: 48 }}
+                size={GoogleSigninButton.Size.Wide}
+                color={GoogleSigninButton.Color.Dark}
+                onPress={this._signIn}
+                disabled={this.state.isSigninInProgress} />
         </View>
     )
 }
